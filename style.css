@@ -1,0 +1,25 @@
+* {
+    margin : 0;
+    background-color: blanchedalmond;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    background-color: purple;
+    color: white;
+    border: none;
+}
+button:hover {
+    background-color: plum;
+}
+
+div {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#answer {
+    border: 3px solid purple;
+    min-height: 25px;
+}

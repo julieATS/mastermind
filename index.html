@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mastermind</title>
+</head>
+<body>
+    <p>Trouvez le code à 4 couleurs !<br>
+    Il a toujours 4 couleurs différentes <br>  
+    Vous avez 12 essais <br>  
+    Couleurs possibles: red orange yellow green blue pink purple white</p>
+    <button type="button" onclick="randomCode()">générer le code secret</button>
+    <div>
+    <label for="input">Entrez les couleurs</label>
+    <input type="text" id="input">
+    <button type="button" onclick="guessCode()">envoyer</button>
+    </div>
+    <p id="answer"></p>
+    <script src="script.js"></script>
+</body>
+</html>
