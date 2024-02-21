@@ -1,13 +1,7 @@
-/*
-(OK) vérifie si bon nombe de couleurs
-(OK) vérifie le nom des couleurs
-(OK) vérifie si le code correspond au code secret
-(OK) 12 tours maximum
-(OK) indique couleur invalide, mal placée, bien placée
-(OK) générer le code secret aléatoirement
-*/
 const colors= ["red", "orange", "yellow", "green", "blue", "pink", "purple", "white"]
 let randCode= []
+
+let selectSecretCode = false
 
 function randomCode() { //return codeToGuess utilisé dans guessCode()
     while (randCode.length < 4) {
@@ -24,6 +18,7 @@ function randomCode() { //return codeToGuess utilisé dans guessCode()
     document.getElementById("answer").innerHTML += "le code secret a été choisi !" + "<br>"
     codeToGuess = randCode
     randCode= []
+    selectSecretCode = true
     return codeToGuess
 }
 
@@ -60,6 +55,7 @@ function multiColors (arr) { // return false
     }
 }
 
+// vérifie si l'input correspond aux règles imposées
 function validInput () { //return true
     input = document.getElementById("input").value
     document.getElementById("input").value = ""
@@ -86,7 +82,11 @@ function validInput () { //return true
 }
 
 let tour=1
+
 function guessCode () {
+    while (selectSecretCode === false) {
+        return document.getElementById("answer").innerHTML += "vous devez d'abord générer un code secret <br>"
+    }
     checkAnswer= validInput() // contient le tableau answer
     if (checkAnswer === true) {
         while (tour<13) {
