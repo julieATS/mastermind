@@ -3,6 +3,7 @@ let randCode= []
 
 let selectSecretCode = false
 let tour=1
+let checkWin = false
 
 function randomCode() { //return codeToGuess utilisé dans guessCode()
     while (randCode.length < 4) {
@@ -22,6 +23,7 @@ function randomCode() { //return codeToGuess utilisé dans guessCode()
     randCode= []
     selectSecretCode = true
     tour = 1
+    checkWin = false
     return codeToGuess
 }
 
@@ -84,17 +86,14 @@ function validInput () { //return true
     }    
 }
 
-
-// en sorte que générer un nouveau code secret fasse revenir au tour un, 
-// sinon on est obligé de recharger la page pour faire une nouvelle partie
-// dans le cas d'une partie perdue ou non terminée
 function guessCode () {
     while (selectSecretCode === false) {
         return document.getElementById("answer").innerHTML += "vous devez d'abord générer un code secret <br>"
     }
     checkAnswer= validInput() // contient le tableau answer
     if (checkAnswer === true) {
-        while (tour<13) {
+        while (tour<13 && checkWin == false) {
+            console.log("still in game " + checkWin)
             document.getElementById("answer").innerHTML += "tour " + tour + " : " + answer + "<br>"
             x=0
             rightPlace= 0
@@ -118,6 +117,8 @@ function guessCode () {
             }
             else if (rightPlace === 4) {
                 document.getElementById("answer").innerHTML += "gagné" + "<br>"
+                checkWin = true
+                console.log("just win " + checkWin)
                 return
             }
             else {
