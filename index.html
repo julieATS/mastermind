@@ -1,20 +1,29 @@
+<!-- font pour le titre https://fonts.google.com/selection/embed -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <title>Mastermind</title>
 </head>
 <body>
+    <!-- dans le script, faire en sorte que générer un nouveau code secret fasse revenir au tour un, 
+    sinon on est obligé de recharger la page pour faire une nouvelle partie
+    dans le cas d'une partie perdue ou non terminée -->
+    <h1>MASTERMIND</h1>
     <p>Trouvez le code à 4 couleurs !<br>
     Il a toujours 4 couleurs différentes <br>  
     Vous avez 12 essais <br>  
     Couleurs possibles: red orange yellow green blue pink purple white</p>
-    <button type="button" onclick="randomCode()">générer le code secret</button>
+    <button id="newCode" type="button" onclick="randomCode()">générer le code secret</button>
     <div>
     <label for="input">Entrez les couleurs</label>
-    <input type="text" id="input">
+    <input type="text" id="input" placeholder="ex : red yellow pink white ">
     <button type="button" onclick="guessCode()">envoyer</button>
     </div>
     <p id="answer"></p>
