@@ -2,6 +2,7 @@ const colors= ["red", "orange", "yellow", "green", "blue", "pink", "purple", "wh
 let randCode= []
 
 let selectSecretCode = false
+let tour=1
 
 function randomCode() { //return codeToGuess utilisé dans guessCode()
     while (randCode.length < 4) {
@@ -19,6 +20,7 @@ function randomCode() { //return codeToGuess utilisé dans guessCode()
     codeToGuess = randCode
     randCode= []
     selectSecretCode = true
+    tour = 1
     return codeToGuess
 }
 
@@ -81,8 +83,10 @@ function validInput () { //return true
     }    
 }
 
-let tour=1
 
+// en sorte que générer un nouveau code secret fasse revenir au tour un, 
+// sinon on est obligé de recharger la page pour faire une nouvelle partie
+// dans le cas d'une partie perdue ou non terminée
 function guessCode () {
     while (selectSecretCode === false) {
         return document.getElementById("answer").innerHTML += "vous devez d'abord générer un code secret <br>"
