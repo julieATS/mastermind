@@ -16,6 +16,7 @@ function randomCode() { //return codeToGuess utilisé dans guessCode()
         }
     }
     console.log(randCode)
+    document.getElementById("answer").innerHTML = ""
     document.getElementById("answer").innerHTML += "le code secret a été choisi !" + "<br>"
     codeToGuess = randCode
     randCode= []
