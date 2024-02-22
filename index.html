@@ -13,14 +13,17 @@
 </head>
 <body>
     <h1>MASTERMIND</h1>
-    <p>Trouvez le code à 4 couleurs !<br>
-    Il a toujours 4 couleurs différentes <br>  
-    Vous avez 12 essais <br>  
-    Couleurs possibles: red orange yellow green blue pink purple white</p>
+    <p><b>Trouvez le code à 4 couleurs !</b><br>
+        <ul>
+            <li>Il a toujours 4 couleurs différentes</li>
+            <li>Vous avez 12 essais</li>
+            <li>Couleurs possibles: rouge orange jaune vert bleu rose violet blanc</li>
+        </ul>
+    </p>
     <button id="newCode" type="button" onclick="randomCode()">générer le code secret</button>
     <div>
     <label for="input">Entrez les couleurs</label>
-    <input type="text" id="input" placeholder="ex : red yellow pink white ">
+    <input type="text" id="input" placeholder="ex : rouge jaune rose blanc ">
     <button type="button" onclick="guessCode()">envoyer</button>
     </div>
     <p id="answer"></p>

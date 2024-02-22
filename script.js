@@ -1,4 +1,4 @@
-const colors= ["red", "orange", "yellow", "green", "blue", "pink", "purple", "white"]
+const colors= ["rouge", "orange", "jaune", "vert", "bleu", "rose", "violet", "blanc"]
 let randCode= []
 
 let selectSecretCode = false
