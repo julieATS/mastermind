@@ -94,7 +94,7 @@ function guessCode () {
     if (checkAnswer === true) {
         while (tour<13 && checkWin == false) {
             console.log("still in game " + checkWin)
-            document.getElementById("answer").innerHTML += "tour " + tour + " : " + answer + "<br>"
+            document.getElementById("answer").innerHTML += "<b>"+"tour " + tour + " : "+"</b>" + answer + "<br>"
             x=0
             rightPlace= 0
             wrongPlace= 0

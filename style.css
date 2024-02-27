@@ -1,9 +1,7 @@
 * {
     margin : 0;
-    background-color: darkslateblue;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: aliceblue;
     font-size: 20px;
     font-family: "Sora", sans-serif;
     font-optical-sizing: auto;
@@ -11,6 +9,8 @@
 }
 
 body {
+    background-color: darkslateblue;
+    color: aliceblue;
     margin: 25px;
 }
 main {
@@ -20,9 +20,7 @@ main {
 section {
     margin-right: 50px;
 }
-p {
-    text-align: center;
-}
+
 h1{
     text-align: center;
     font-size: 60px;
@@ -33,6 +31,9 @@ h1{
 h2 {
     margin-bottom: 50px;
     text-align: center;
+}
+h3 {
+    font-weight: normal;
 }
 button{
     background-color: aliceblue;
@@ -46,9 +47,15 @@ button:hover {
 #newCode {
     margin-top: 25px;
 }
+#colors {
+    display: flex;
+    margin: 0;
+}
 input {
- border: aliceblue solid 2px;
- width: 300px;
+    background-color: darkslateblue;
+    color: aliceblue;
+    border: aliceblue solid 2px;
+    width: 300px;
 }
 input::placeholder {
     font-style: italic;
@@ -63,6 +70,6 @@ div {
     background-color: rgb(240, 248, 255);
     color: darkblue;
     min-height: 500px;
-    min-width: 450px;
+    min-width: 400px;
     padding: 10px;
 }
